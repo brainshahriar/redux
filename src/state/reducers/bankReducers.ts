@@ -1,12 +1,18 @@
-const reducer = (state,action) ={
-    swith (action.type){
-        case "deposite":
+import { Action } from '../actions/index'
+import { ActionType } from '../action-type';
+
+const initialState = 0;
+
+const reducer = (state:number = initialState,action:Action) =>{
+    switch (action.type){
+        case ActionType.DEPOSITE :
             return state + action.payload;
-            case "deposite":
+            case ActionType.WITHDRAW:
                 return state - action.payload;
-                case "bankrupt":
+                case ActionType.BANKRUPT:
                     return 0;
                     default:
                         return state
     }
 }
+export default reducer
