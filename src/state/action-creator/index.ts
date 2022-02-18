@@ -20,7 +20,7 @@ export const withdrawMoney = (amount : number) => {
     }
 }
 
-export const bankcruptMoney = (amount : number) => {
+export const bankcruptMoney = () => {
     return (dispatch : Dispatch<Action>) => {
         dispatch({
             type : ActionType.BANKRUPT
